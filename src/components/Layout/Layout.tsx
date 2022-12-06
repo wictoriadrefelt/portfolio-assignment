@@ -6,7 +6,12 @@ import Header from "./Header";
 
 const Layout: FC = () => {
   return (
-    <AppShell padding={0} header={<Header />} footer={<Footer />}>
+    <AppShell
+      sx={{ backgroundColor: "white" }}
+      padding={16}
+      header={<Header />}
+      footer={<Footer />}
+    >
       <Content />
     </AppShell>
   );
