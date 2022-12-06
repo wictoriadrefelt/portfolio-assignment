@@ -4,6 +4,7 @@ import Members from "../Pages/Members";
 import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
 import { Box } from "@mantine/core";
+import Profile from "../Pages/Profile";
 
 const Content: FC = () => {
   return (
@@ -19,7 +20,7 @@ const Content: FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/members" element={<Members />} />
           <Route path="/contact" element={<Contact />} />
-          {/* + Lägg till dynamisk profilsida */}
+          <Route path="/members/:slug" element={<Profile />} />
         </Routes>
       </Box>
     </Box>
