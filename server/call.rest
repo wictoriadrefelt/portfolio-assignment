@@ -1,0 +1,81 @@
+
+### GET all members
+GET http://localhost:4000/api/members
+
+
+### GET specific member by id
+GET http://localhost:4000/api/members/2
+
+
+### POST Creates new member
+POST http://localhost:4000/api/members
+Content-Type: application/json
+
+{
+  "name": "Angelica Moberg",
+  "title": "Webbutvecklare",
+  "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+  "image": "johan.jpg",
+  "skills": [
+    {
+      "skill": "React",
+      "stars": 3
+    },
+    {
+      "skill": "Next.js",
+      "stars": 5
+    },
+    {
+      "skill": "Cypress",
+      "stars": 5
+    },
+    {
+      "skill": "PHP",
+      "stars": 5
+    },
+    {
+      "skill": "Wordpress",
+      "stars": 4
+    }
+  ]
+}
+
+
+### PUT - Change member 
+PUT http://localhost:4000/api/members
+Content-Type: application/json
+
+{
+"id": "HB0VC_9craypeb7XTVWOc",
+  "name": "Angelica Moberg Skoglund",
+  "title": "Webbutvecklare",
+  "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+  "image": "johan.jpg",
+  "skills": [
+    {
+      "skill": "React",
+      "stars": 3
+    },
+    {
+      "skill": "Next.js",
+      "stars": 5
+    },
+    {
+      "skill": "Cypress",
+      "stars": 5
+    },
+    {
+      "skill": "PHP",
+      "stars": 5
+    },
+    {
+      "skill": "Wordpress",
+      "stars": 4
+    }
+  ]
+}
+
+
+
+### DELETE 
+DELETE  http://localhost:4000/api/members/luSdk0b19Y1hu0aewllpd
