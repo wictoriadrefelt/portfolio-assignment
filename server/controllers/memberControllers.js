@@ -90,6 +90,8 @@ export const createMember = (req, res) => {
       presentation: req.body.presentation,
       image: req.body.image,
       skills: req.body.skills,
+      phone: req.body.phone,
+      mail: req.body.mail,
     };
 
     // Gets json file and new member
@@ -143,6 +145,8 @@ export const editMember = (req, res) => {
       presentation: req.body.presentation,
       image: req.body.image,
       skills: req.body.skills,
+      phone: req.body.phone,
+      mail: req.body.mail,
     };
 
     // Updates the previous member with updated info

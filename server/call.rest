@@ -16,6 +16,8 @@ Content-Type: application/json
   "title": "Webbutvecklare",
   "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
   "image": "johan.jpg",
+   "phone": "0767106199",
+    "mail": "angelica@brainwave.se",
   "skills": [
     {
       "skill": "React",
@@ -78,4 +80,4 @@ Content-Type: application/json
 
 
 ### DELETE 
-DELETE  http://localhost:4000/api/members/luSdk0b19Y1hu0aewllpd
+DELETE  http://localhost:4000/api/members/PvpCF7NSDnw3PiRr_D9Kv
