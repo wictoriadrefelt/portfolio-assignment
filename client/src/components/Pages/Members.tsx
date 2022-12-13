@@ -101,7 +101,10 @@ const Members: FC = () => {
         justify="flex-end"
         sx={(theme) => ({
           width: "100%",
-          [theme.fn.smallerThan("xs")]: { justifyContent: "center" },
+          [theme.fn.smallerThan("xs")]: {
+            justifyContent: "center",
+            paddingRight: "0px",
+          },
         })}
       >
         <Box
