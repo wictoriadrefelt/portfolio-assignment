@@ -37,6 +37,7 @@ function App() {
             lg: 20,
             xl: 30,
           },
+
           headings: {
             sizes: {
               h2: { fontWeight: 600 },
