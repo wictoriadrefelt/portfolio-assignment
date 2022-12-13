@@ -25,7 +25,7 @@ export const getMember = (req, res) => {
 
     // Gets an updated list containing the specific member
     const getMember = JSON.parse(data).find(
-      (member) => member.id === req.params.id
+      (member) => member.slug === req.params.id
     );
 
     if (!getMember) {
