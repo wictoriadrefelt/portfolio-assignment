@@ -18,8 +18,7 @@ const Home: FC = () => {
       top:60,
       left:0,
       bottom:60,
-      paddingTop:20,
-      paddingLeft:20,
+      padding:20,      
       zIndex:9999,
       maxWidth:"600px",
       height: "84.5vh",
@@ -32,16 +31,16 @@ const Home: FC = () => {
       sx={(theme) => ({
         color: theme.colors.brand[3],
         fontSize : theme.fontSizes.xl,
-        margin: theme.spacing.sm,
+        margin: theme.spacing.md,
         })}>
       Sed ut perspiciatis unde omnis
       </Title>
       <Text 
       sx={(theme) => ({
         color: theme.colors.brand[4],
-        fontSize : theme.fontSizes.sm,
-        marginLeft: theme.spacing.sm,
-        maxWidth: 400,
+        fontSize : theme.fontSizes.lg,
+        marginLeft: theme.spacing.md,
+        maxWidth: 550,
         })}
         >
         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
@@ -50,14 +49,17 @@ const Home: FC = () => {
       <Button
       sx={(theme) => ({
         background: theme.colors.brand[3],
-        fontSize : theme.fontSizes.md,
-        margin: theme.spacing.sm,
+        fontSize : theme.fontSizes.lg,
+        margin: theme.spacing.md,
         borderRadius: 8,
         ":hover": {
           borderRadius: 8,
           background: theme.colors.brand[4],
-        }
+        },
+        height:52,
+        width: 192,
         })}
+        
       >Members</Button>
       </Link>
       </Box>
