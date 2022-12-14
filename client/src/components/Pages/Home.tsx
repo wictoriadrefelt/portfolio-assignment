@@ -15,16 +15,13 @@ const Home: FC = () => {
       sx=
       {{
       position:"fixed",  
-      top:60,
-      left:0,
-      bottom:60,
-      padding:20,      
+      left:0,    
       zIndex:9999,
-      maxWidth:"600px",
-      height: "84.5vh",
+      width:"100vw",
+      height: "86.6vh",
       background: 
-      "linear-gradient(to bottom right, #FFFFFF 20%, rgba(255, 255, 255, 0) 55%)",
-  
+      "linear-gradient(140deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 75%)",
+      marginTop:"-16px",
       }}
       >
       <Title 
@@ -41,6 +38,8 @@ const Home: FC = () => {
         fontSize : theme.fontSizes.lg,
         marginLeft: theme.spacing.md,
         maxWidth: 550,
+        textAlign:"justify",
+        paddingRight:"25px",
         })}
         >
         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
