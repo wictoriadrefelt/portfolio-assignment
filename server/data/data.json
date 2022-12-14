@@ -1,1 +1,118 @@
-[{"id":"1","slug":"johan-andersson","name":"Johan Andersson","title":"Webbutvecklare","presentation":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.","image":"johan.jpg","phone":"0767101234","mail":"johan@brainwave.se","skills":[{"skill":"React","stars":5},{"skill":"Next.js","stars":5},{"skill":"Cypress","stars":5},{"skill":"PHP","stars":5},{"skill":"Node.js","stars":5}]},{"id":"2","slug":"erik-svensson","name":"Erik Svensson","title":"Webbutvecklare","presentation":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.","image":"johan.jpg","phone":"0767101234","mail":"erik@brainwave.se","skills":[{"skill":"React","stars":3},{"skill":"Next.js","stars":5},{"skill":"Cypress","stars":5},{"skill":"PHP","stars":5},{"skill":"Wordpress","stars":4}]},{"id":"3","slug":"stig-lunqvist","name":"Stig Lundqvist","title":"Webbutvecklare","presentation":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.","image":"johan.jpg","phone":"0767101234","mail":"stig@brainwave.se","skills":[{"skill":"React","stars":5},{"skill":"Next.js","stars":5},{"skill":"Cypress","stars":5},{"skill":"PHP","stars":5},{"skill":"Node.js","stars":5}]},{"id":"4","slug":"sven-olsson","name":"Sven Olsson","title":"Webbutvecklare","presentation":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.","image":"johan.jpg","phone":"0767101234","mail":"sven@brainwave.se","skills":[{"skill":"React","stars":5},{"skill":"Next.js","stars":5},{"skill":"Cypress","stars":5},{"skill":"PHP","stars":5},{"skill":"Node.js","stars":5}]},{"id":"5","slug":"sigge-eklund","name":"Sigge Eklund","title":"Webbutvecklare","presentation":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.","image":"johan.jpg","phone":"0767101234","mail":"sigge@brainwave.se","skills":[{"skill":"React","stars":2},{"skill":"Next.js","stars":5},{"skill":"Cypress","stars":5},{"skill":"PHP","stars":3},{"skill":"Node.js","stars":5}]}]
+[
+  {
+    "id": "1",
+    "slug": "johan-andersson",
+    "name": "Johan Andersson",
+    "title": "Webbutvecklare",
+    "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+    "image": "johan.jpg",
+    "phone": "0767101234",
+    "mail": "johan@brainwave.se",
+    "skills": [
+      { "skill": "React", "stars": 5 },
+      { "skill": "Next.js", "stars": 5 },
+      { "skill": "Cypress", "stars": 5 },
+      { "skill": "PHP", "stars": 5 },
+      { "skill": "Node.js", "stars": 5 }
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "adriana-kambula",
+    "name": "Adriana Kambula",
+    "title": "Webbutvecklare",
+    "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+    "image": "adriana.jpg",
+    "phone": "0767101235",
+    "mail": "adriana@brainwave.se",
+    "skills": [
+      { "skill": "React", "stars": 3 },
+      { "skill": "Typescript", "stars": 4 },
+      { "skill": "PHP", "stars": 5 },
+      { "skill": "Wordpress", "stars": 4 }
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "stig",
+    "name": "Stig Lundqvist",
+    "title": "Webbutvecklare",
+    "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+    "image": "stig.jpg",
+    "phone": "0767101234",
+    "mail": "stig@brainwave.se",
+    "skills": [
+      { "skill": "React", "stars": 5 },
+      { "skill": "Next.js", "stars": 5 },
+      { "skill": "Cypress", "stars": 5 },
+      { "skill": "PHP", "stars": 5 },
+      { "skill": "Node.js", "stars": 5 }
+    ]
+  },
+  {
+    "id": "4",
+    "slug": "annika-nilsson",
+    "name": "Annika Nilsson",
+    "title": "Webbutvecklare",
+    "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+    "image": "annika.jpg",
+    "phone": "0767101236",
+    "mail": "annika@brainwave.se",
+    "skills": [
+      { "skill": "React", "stars": 5 },
+      { "skill": "PHP", "stars": 5 },
+      { "skill": "Node.js", "stars": 5 },
+      { "skill": "Next.js", "stars": 3 },
+      { "skill": "Cypress", "stars": 2 },
+      { "skill": "Python", "stars": 2 }
+    ]
+  },
+  {
+    "id": "5",
+    "slug": "axel-pilegard",
+    "name": "Axel Pilegård",
+    "title": "Webbutvecklare",
+    "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+    "image": "axel.jpg",
+    "phone": "0767101237",
+    "mail": "axel@brainwave.se",
+    "skills": [
+      { "skill": "Wordpress", "stars": 5 },
+      { "skill": "WooCommerce", "stars": 4 },
+      { "skill": "Design", "stars": 4 },
+      { "skill": "PHP", "stars": 3 }
+    ]
+  },
+  {
+    "id": "6",
+    "slug": "carlos-soto",
+    "name": "Carlos Soto",
+    "title": "Webbutvecklare",
+    "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+    "image": "carlos.jpg",
+    "phone": "0767101238",
+    "mail": "carlos@brainwave.se",
+    "skills": [
+      { "skill": "React", "stars": 2 },
+      { "skill": "Next.js", "stars": 5 },
+      { "skill": "Node.js", "stars": 5 }
+    ]
+  },
+  {
+    "id": "7",
+    "slug": "millie-yang",
+    "name": "Millie Yang",
+    "title": "Backend-utvecklare",
+    "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.",
+    "image": "millie.jpg",
+    "phone": "0767101241",
+    "mail": "millie@brainwave.se",
+    "skills": [
+      { "skill": ".Net", "stars": 5 },
+      { "skill": "Cypress", "stars": 5 },
+      { "skill": "PHP", "stars": 4 },
+      { "skill": "Node.js", "stars": 3 },
+      { "skill": "React", "stars": 2 }
+    ]
+  }
+]
