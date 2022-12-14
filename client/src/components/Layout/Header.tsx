@@ -78,7 +78,7 @@ export default function AppShellDemo() {
           <Link style={link} hidden={opened} to='/contact'>Contact</Link>     
           </Flex>      
         </MediaQuery> 
-          <Flex direction='column' >
+          <Flex direction='column' justify='center' align='center'>
         <MediaQuery largerThan='xs' styles={{ display: 'none'}}>
             <Flex> 
               <Menu shadow='md' width='80%'>
@@ -88,8 +88,8 @@ export default function AppShellDemo() {
                     onClick={() => setOpened((o) => !o)}
                     size="sm"
                     color={theme.colors.brand[0]}
-                    mr="xl"
-                    pb='sm'
+                    mr="xs"
+                    
                 />
                   </Menu.Target>
                 <Menu.Dropdown className={classes.dropdown}>
