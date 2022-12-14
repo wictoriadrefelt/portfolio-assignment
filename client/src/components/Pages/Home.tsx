@@ -16,12 +16,12 @@ const Home: FC = () => {
       {{
       position:"fixed",  
       left:0,    
+      top:60,
+      bottom:55,
       zIndex:9999,
       width:"100vw",
-      height: "86.6vh",
       background: 
       "linear-gradient(140deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 75%)",
-      marginTop:"-16px",
       }}
       >
       <Title 
