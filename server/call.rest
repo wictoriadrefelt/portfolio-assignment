@@ -4,7 +4,7 @@ GET http://localhost:4000/api/members
 
 
 ### GET specific member by id
-GET http://localhost:4000/api/members/2
+GET http://localhost:4000/api/members/johan-andersson
 
 
 ### POST Creates new member
