@@ -55,6 +55,7 @@ function App() {
                   background: theme.colors.brand[3],
                   paddingRight: theme.spacing.lg,
                   paddingLeft: theme.spacing.lg,
+                  boxShadow: "2px 2px 5px gray",
                   "&:hover": {
                     background: theme.colors.brand[4],
                   },
