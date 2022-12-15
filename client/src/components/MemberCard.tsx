@@ -2,7 +2,7 @@ import { Box, Flex, Text, Title } from "@mantine/core";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { Member } from "./Pages/Members";
-import ProfilePicture from "./profilePicture";
+import ProfilePicture from "./ProfilePicture";
 
 interface Props {
   member: Member;

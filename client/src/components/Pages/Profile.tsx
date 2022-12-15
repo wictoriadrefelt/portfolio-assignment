@@ -3,6 +3,7 @@ import {
   Button,
   Center,
   Flex,
+  Group,
   MediaQuery,
   Text,
   Title,
@@ -10,7 +11,8 @@ import {
 import { IconArrowLeft, IconMail, IconPhone } from "@tabler/icons";
 import { FC, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import ProfilePicture from "../profilePicture";
+import ProfilePicture from "../ProfilePicture";
+import Skill from "../Skill";
 import { Member } from "./Members";
 
 const Profile: FC = () => {
@@ -133,13 +135,22 @@ const Profile: FC = () => {
               })}
             >
               <Title order={2}>Skills</Title>
-              <Text>Här kommer skills sedan</Text>
+              <Flex
+                w={300}
+                align={"center"}
+                justify="space-between"
+                sx={{ flexWrap: "wrap" }}
+              >
+                {member?.skills.map((skill) => {
+                  return <Skill skill={skill} />;
+                })}
+              </Flex>
             </Flex>
             <Flex
               w={"100%"}
               justify="flex-end"
               mr="xl"
-              mt="md"
+              mt={70}
               sx={(theme) => ({
                 [theme.fn.smallerThan("sm")]: {
                   marginRight: "0px",

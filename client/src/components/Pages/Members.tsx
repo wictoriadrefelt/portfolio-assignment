@@ -12,7 +12,7 @@ import { IconAdjustments } from "@tabler/icons";
 import { FC, useEffect, useRef, useState } from "react";
 import MemberCard from "../MemberCard";
 
-type Skill = {
+export type Skill = {
   skill: string;
   stars: number;
 };

@@ -62,7 +62,6 @@ function App() {
                   },
                 },
                 label: {
-                  fontSize: theme.fontSizes.xs,
                   fontWeight: "normal",
                 },
               }),
