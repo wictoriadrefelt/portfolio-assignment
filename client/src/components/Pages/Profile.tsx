@@ -174,16 +174,18 @@ const Profile: FC = () => {
                   Gå tillbaka
                 </Text>
               </Flex>
-              <Button
-                mr={100}
-                sx={(theme) => ({
-                  [theme.fn.smallerThan("sm")]: {
-                    marginRight: "0px",
-                  },
-                })}
-              >
-                Kontakta oss
-              </Button>
+              <Link to={"/contact"}>
+                <Button
+                  mr={100}
+                  sx={(theme) => ({
+                    [theme.fn.smallerThan("sm")]: {
+                      marginRight: "0px",
+                    },
+                  })}
+                >
+                  Kontakta oss
+                </Button>
+              </Link>
             </Flex>
           </Flex>
         </Flex>
