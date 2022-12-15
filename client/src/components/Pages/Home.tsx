@@ -29,8 +29,11 @@ const Home: FC = () => {
         color: theme.colors.brand[3],
         fontSize : theme.fontSizes.xl,
         margin: theme.spacing.md,
+        paddingTop: 50,
+        letterSpacing:-2,
+        wordSpacing:-2,
         })}>
-      Sed ut perspiciatis unde omnis
+      Sed ut perspiciatis unde <br /> omnis
       </Title>
       <Text 
       sx={(theme) => ({
@@ -40,6 +43,8 @@ const Home: FC = () => {
         maxWidth: 550,
         textAlign:"justify",
         paddingRight:"25px",
+        paddingTop: 40,
+        paddingBottom:40,
         })}
         >
         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
