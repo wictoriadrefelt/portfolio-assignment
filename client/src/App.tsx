@@ -1,6 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import {
+  ButtonStylesParams,
+  CSSObject,
   DefaultMantineColor,
   MantineProvider,
   MantineTheme,
@@ -31,7 +33,7 @@ function App() {
             ],
           },
           fontSizes: {
-            xs: 10,
+            xs: 11,
             sm: 13,
             md: 16,
             lg: 20,
@@ -43,6 +45,26 @@ function App() {
             },
           },
           components: {
+            Button: {
+              styles: (
+                theme: MantineTheme,
+                params: ButtonStylesParams
+              ): Record<string, CSSObject> => ({
+                root: {
+                  borderRadius: theme.radius.sm,
+                  background: theme.colors.brand[3],
+                  paddingRight: theme.spacing.lg,
+                  paddingLeft: theme.spacing.lg,
+                  "&:hover": {
+                    background: theme.colors.brand[4],
+                  },
+                },
+                label: {
+                  fontSize: theme.fontSizes.xs,
+                  fontWeight: "normal",
+                },
+              }),
+            },
             Title: {
               styles: (theme: MantineTheme) => ({
                 root: {
