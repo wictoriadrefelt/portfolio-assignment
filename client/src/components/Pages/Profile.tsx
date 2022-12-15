@@ -1,14 +1,30 @@
 import { Text } from "@mantine/core";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Member } from "./Members";
 
 const Profile: FC = () => {
   const { slug } = useParams();
+  const [member, setMember] = useState<Member>();
 
-  console.log(slug);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let response = await fetch("http://localhost:4000/api/members/" + slug);
+        let result = await response.json();
+        if (result) {
+          setMember(result);
+          return;
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <div>
-      <Text>Profilsida</Text>
+      <Text>{member?.name}</Text>
     </div>
   );
 };
