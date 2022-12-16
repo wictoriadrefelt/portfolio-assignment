@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
  
 
   inner: {
-    maxWidth:1000,
+    maxWidth:1100,
     display: 'flex', 
     flexWrap:"wrap",
     justifyContent: 'space-between',
