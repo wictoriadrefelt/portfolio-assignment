@@ -34,7 +34,8 @@ const Contact: FC = () => {
         justifyContent: 'space-evenly',
         [theme.fn.smallerThan('md')]: {
           marginTop: "0px",
-          wrap: 'wrap',
+          flexWrap: 'wrap',
+          direction: 'column',
         },
       })}>
         
@@ -69,10 +70,10 @@ const Contact: FC = () => {
         <Box mt='25px' ml='lg' >
           <Title order={2} mt='xs' sx={(theme) => ({
             [theme.fn.smallerThan('md')]: {
-              marginLeft: '3px'
+              marginLeft: '1px'
             },
             [theme.fn.smallerThan("sm")]: {
-              marginLeft: '3px'
+              marginLeft: '145px'
             },
             [theme.fn.smallerThan("xs")]: {
               marginLeft: '45px'
