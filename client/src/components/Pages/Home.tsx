@@ -7,9 +7,17 @@ const Home: FC = () => {
     <>
       <Image 
       src="./src/assets/people_1920.jpg"
-      height="107vh"
+      height="109vh"
       width="100vw"
-      sx={{position:"absolute", top:80, left:0}}
+      fit="cover"
+      sx={(theme)=>
+        ({
+        display: "flex",
+        position:"absolute", 
+        top:80, 
+        left:0,
+      })}
+      
       />
       <Box 
       sx=
@@ -27,7 +35,10 @@ const Home: FC = () => {
       marginBottom:"-120px",
       paddingLeft:"40px",
       background: 
-      "linear-gradient(160deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 75%)",
+      "linear-gradient(160deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 65%)",
+      [theme.fn.smallerThan(930) && theme.fn.largerThan(428)]:{
+        marginTop:"-30px"
+      }
       })}
       >
       <Title 
@@ -36,7 +47,7 @@ const Home: FC = () => {
         fontSize : theme.fontSizes.xl,
         margin: theme.spacing.md,
         paddingTop: 70,
-        letterSpacing:-2,
+        letterSpacing:-1,
         wordSpacing:-2,
         })}>
       Vi lyfter er organisation till  <br /> nästa nivå
@@ -51,7 +62,7 @@ const Home: FC = () => {
         paddingRight:"25px",
         paddingTop: 40,
         paddingBottom:40,
-        [theme.fn.smallerThan(850)]:{
+        [theme.fn.smallerThan(930)]:{
         paddingTop: 10,
         paddingBottom:10,
         }
