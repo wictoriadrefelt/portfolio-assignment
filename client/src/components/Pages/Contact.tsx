@@ -106,4 +106,3 @@ const Contact: FC = () => {
 }
 
 export default Contact;
-
