@@ -25,13 +25,13 @@ const Contact: FC = () => {
     <form onSubmit={form.onSubmit(console.log)}>
       
       <Title order={1} sx={{ textAlign: 'center'}} >Kontakt</Title>
-      <Title order={2} sx={{ margin:'0px', marginLeft: '200px'}}>Kontakta Oss</Title>
+      <Title order={2} sx={{ marginLeft: '200px'}}>Kontakta Oss</Title>
       <Title order={2} sx={{ textAlign:'right', marginRight:'300px', marginTop: '-20px'}}>Kontoret</Title>
       
       <a target={"_blank"} href={"https://www.google.com/maps/place/Medieinstitutet/@57.7097478,11.9924801,17.09z/data=!4m5!3m4!1s0x464ff30de9cbee3d:0xbb3f902b63916df6!8m2!3d57.709754!4d11.9945328"}
        > <Image src="./src/assets/map.png" style={{ width: 700, float: 'right', marginTop: '10px'}} /></a>
       
-      <Text style={{  marginTop: '430px', marginLeft: '900px'}} >
+      <Text style={{  marginTop: '430px', marginLeft: '1000px'}} >
         <IconPhone/>+4673-712 34 56</Text>
 
       <Link
@@ -50,7 +50,7 @@ const Contact: FC = () => {
           },
         })}
       >
-        <IconMail style={{ color: 'black', marginLeft: '900px'}} /> <Text ml="xs" style={{ color: 'black'}}>support@brainwave.se </Text>
+        <IconMail style={{ color: 'black', marginLeft: '1000px'}} /> <Text ml="xs" style={{ color: 'black'}}>support@brainwave.se </Text>
       </Flex>
     </Link>
 
