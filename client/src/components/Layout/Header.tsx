@@ -75,7 +75,7 @@ export default function AppShellDemo() {
           <Flex direction='row' p='sm'>
           <Link hidden={opened} style={link}
             to="/login">Login </Link>
-          <Link style={link} hidden={opened} to='/contact'>Contact</Link>     
+          <Link style={link} hidden={opened} to='/contact'>Kontakt</Link>     
           </Flex>      
         </MediaQuery> 
           <Flex direction='column' justify='center' align='center'>
@@ -94,13 +94,13 @@ export default function AppShellDemo() {
                   </Menu.Target>
                 <Menu.Dropdown className={classes.dropdown}>
                   <Link to='/'> 
-                <Menu.Item component="a" className={classes.menuLinks}>Home</Menu.Item>
+                <Menu.Item component="a" className={classes.menuLinks}>Hem</Menu.Item>
                   </Link>
                   <Link to='/login'> 
                 <Menu.Item component="a" className={classes.menuLinks}>Login</Menu.Item>
                   </Link>
                   <Link to='/contact'> 
-                <Menu.Item component='a' className={classes.menuLinks}>Contact</Menu.Item>
+                <Menu.Item component='a' className={classes.menuLinks}>Kontakt</Menu.Item>
                   </Link>
                 </Menu.Dropdown>
                 </Menu>
