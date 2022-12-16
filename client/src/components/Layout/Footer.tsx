@@ -55,11 +55,11 @@ export default function Footer() {
       <Container className={classes.inner}>
         <Text sx= {{paddingBottom:"20px"}}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </Text>
         <Flex sx={{width:"200px" ,justifyContent:"space-around"}}> 
-        <Link to ="/Login>">
-          <Button color="brand.3">Login</Button> 
+        <Link to ="/login">
+          <Button color="brand.3">Logga in </Button> 
         </Link>
-        <Link to ="/Contact>">
-          <Button color="brand.3">Contact us </Button>
+        <Link to ="/contact">
+          <Button color="brand.3">Kontakta oss</Button>
         </Link>
         </Flex>  
       </Container>
