@@ -8,11 +8,12 @@ const useStyles = createStyles((theme) => ({
   footer: {
     backgroundColor: "#EAE6E3",
     marginTop: 120,
-   
+
   },
  
 
   inner: {
+    maxWidth:1100,
     display: 'flex', 
     flexWrap:"wrap",
     justifyContent: 'space-between',
@@ -53,14 +54,14 @@ export default function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Text sx= {{paddingBottom:"20px"}}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </Text>
-        <Flex sx={{width:"200px" ,justifyContent:"space-around"}}> 
-        <Link to ="/login">
-          <Button color="brand.3">Logga in </Button> 
-        </Link>
-        <Link to ="/contact">
-          <Button color="brand.3">Kontakta oss</Button>
-        </Link>
+        <Text sx= {{paddingBottom:"20px"}} align="center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </Text>
+        <Flex sx={{width:"288px" ,justifyContent:"space-around", paddingLeft: "3px"}}> 
+          <Link to ="/login">
+            <Button color="brand.3">Logga in</Button> 
+          </Link>
+          <Link to ="/contact">
+            <Button  color="brand.3">Kontakta oss</Button>
+          </Link>
         </Flex>  
       </Container>
       <Container>
