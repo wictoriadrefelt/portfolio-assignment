@@ -55,7 +55,7 @@ export default function Footer() {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Text sx= {{paddingBottom:"20px"}} align="center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </Text>
-        <Flex sx={{width:"238px" ,justifyContent:"space-around", paddingLeft: "3px"}}> 
+        <Flex sx={{width:"288px" ,justifyContent:"space-around", paddingLeft: "3px"}}> 
           <Link to ="/login">
             <Button color="brand.3">Logga in</Button> 
           </Link>
