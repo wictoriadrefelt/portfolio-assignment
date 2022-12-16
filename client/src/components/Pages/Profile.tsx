@@ -7,6 +7,7 @@ import {
   MediaQuery,
   Text,
   Title,
+  Grid,
 } from "@mantine/core";
 import { IconArrowLeft, IconMail, IconPhone } from "@tabler/icons";
 import { FC, useEffect, useState } from "react";
@@ -54,12 +55,7 @@ const Profile: FC = () => {
             },
           })}
         >
-          <Flex
-            direction={"column"}
-            justify="center"
-            align="center"
-            sx={{ width: "50%" }}
-          >
+          <Flex direction={"column"} align="center" sx={{ width: "50%" }}>
             <ProfilePicture imagePath={imagePath} />
             <MediaQuery
               smallerThan="sm"
@@ -138,12 +134,21 @@ const Profile: FC = () => {
               <Flex
                 w={300}
                 align={"center"}
-                justify="space-between"
-                sx={{ flexWrap: "wrap" }}
-              >
-                {member?.skills.map((skill) => {
-                  return <Skill skill={skill} />;
+                sx={(theme) => ({
+                  [theme.fn.smallerThan("sm")]: {
+                    marginTop: theme.spacing.xs,
+                  },
                 })}
+              >
+                <Grid>
+                  {member?.skills.map((skill) => {
+                    return (
+                      <Grid.Col span={6}>
+                        <Skill skill={skill} />
+                      </Grid.Col>
+                    );
+                  })}
+                </Grid>
               </Flex>
             </Flex>
             <Flex

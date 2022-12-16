@@ -12,14 +12,14 @@ const Skill: FC<Props> = (props) => {
       <Title mb={3} order={6}>
         {props.skill.skill}
       </Title>
-      <Flex>
+      <Flex mr={10} pb={10}>
         {Array.from(Array(props.skill.stars), (e, i) => {
           return (
             <IconStar
               style={{ marginRight: "5px" }}
               size={15}
-              color="#EBCDC3"
-              fill="#EBCDC3"
+              color="#D5B19B"
+              fill="#D5B19B"
             />
           );
         })}
