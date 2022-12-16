@@ -14,12 +14,14 @@ const Home: FC = () => {
       <Box 
       sx=
       {{
+      overflow:"hidden",
       position:"fixed",  
       left:0,    
       top:60,
       bottom:55,
-      zIndex:9999,
+      zIndex:1,
       width:"100vw",
+      height:"100vh",
       background: 
       "linear-gradient(140deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 75%)",
       }}
@@ -30,12 +32,12 @@ const Home: FC = () => {
         fontSize : theme.fontSizes.xl,
         margin: theme.spacing.md,
         paddingTop: 50,
-        letterSpacing:-2,
+        letterSpacing:-1,
         wordSpacing:-2,
         })}>
-      Sed ut perspiciatis unde <br /> omnis
+      Vi lyfter er organisation till <br /> nästa nivå
       </Title>
-      <Text 
+      <Title
       sx={(theme) => ({
         color: theme.colors.brand[4],
         fontSize : theme.fontSizes.lg,
@@ -45,10 +47,16 @@ const Home: FC = () => {
         paddingRight:"25px",
         paddingTop: 40,
         paddingBottom:40,
+        letterSpacing:-1,
+        wordSpacing:-1,
         })}
+        order={2}
         >
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-      </Text>
+       Våra konsulter står redo, med relevant erfarenhet för att möta era
+       nuvarande utmaningar – oavsett om det gäller den dagliga verksamheten,
+       en förändringsresa eller utveckling. Med stor passion för matchning
+       och utveckling, säkerställer vi rätt konsult för era behov
+      </Title>
       <Link to="/members">
       <Button
       sx={(theme) => ({
