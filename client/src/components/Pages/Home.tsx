@@ -7,7 +7,7 @@ const Home: FC = () => {
     <>
       <Image 
       src="./src/assets/people_1920.jpg"
-      height="109vh"
+      height="108vh"
       width="100vw"
       fit="cover"
       sx={(theme)=>
@@ -30,14 +30,14 @@ const Home: FC = () => {
       zIndex:1,
       width:"100vw",
       height:"100vh",
-      marginTop:"-17px",
-      marginLeft:"-50px",
-      marginBottom:"-120px",
-      paddingLeft:"40px",
+      marginTop:"-40px",
+      marginLeft:"-16px",
+      marginBottom:"-150px",
       background: 
-      "linear-gradient(160deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 65%)",
-      [theme.fn.smallerThan(930) && theme.fn.largerThan(428)]:{
-        marginTop:"-30px"
+      "linear-gradient(160deg, #FFFFFF 25%, rgba(255, 255, 255, 0) 58%)",
+      [theme.fn.smallerThan(930)]:{
+        marginTop:"-30px",
+    
       }
       })}
       >
@@ -65,6 +65,7 @@ const Home: FC = () => {
         [theme.fn.smallerThan(930)]:{
         paddingTop: 10,
         paddingBottom:10,
+        paddingRight:"30px",
         }
         })}
         order={2}
