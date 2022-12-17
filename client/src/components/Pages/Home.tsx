@@ -1,13 +1,16 @@
-import { Text, Title, Image, Box, Button} from "@mantine/core";
+import { Text, Title, Image, Box, Button, Flex, BackgroundImage} from "@mantine/core";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
 const Home: FC = () => {
   return (
     <>
-      <Image 
+    <Flex 
+    justify="flex-start"
+    align="flex-start">
+    <Image 
       src="./src/assets/people_1920.jpg"
-      height="108vh"
+      height="107vh"
       width="100vw"
       fit="cover"
       sx={(theme)=>
@@ -18,26 +21,23 @@ const Home: FC = () => {
         left:0,
       })}
       
-      />
-      <Box 
+      /> 
+      <Flex 
+      justify="flex-start"
+      align="flex-start"
+      direction="column"
       sx=
       {(theme)=>({
-      position:"sticky",  
+      position:"absolute",  
       left:0,    
-      top:0,
-      bottom:0,
-      right:0,
-      zIndex:1,
+      top:80,
+      zIndex:10,
       width:"100vw",
       height:"100vh",
-      marginTop:"-40px",
-      marginLeft:"-16px",
-      marginBottom:"-150px",
       background: 
-      "linear-gradient(160deg, #FFFFFF 25%, rgba(255, 255, 255, 0) 58%)",
+      "linear-gradient(160deg, #FFFFFF 25%, rgba(255,255,255,0) 58%)",
       [theme.fn.smallerThan(930)]:{
         marginTop:"-30px",
-    
       }
       })}
       >
@@ -47,6 +47,7 @@ const Home: FC = () => {
         fontSize : theme.fontSizes.xl,
         margin: theme.spacing.md,
         paddingTop: 70,
+        paddingLeft:20,
         letterSpacing:-1,
         wordSpacing:-2,
         })}>
@@ -60,6 +61,7 @@ const Home: FC = () => {
         maxWidth: 650,
         textAlign:"left",
         paddingRight:"25px",
+        paddingLeft:20,
         paddingTop: 40,
         paddingBottom:40,
         [theme.fn.smallerThan(930)]:{
@@ -80,7 +82,8 @@ const Home: FC = () => {
       sx={(theme) => ({
         background: theme.colors.brand[3],
         fontSize : theme.fontSizes.lg,
-        margin: theme.spacing.md,
+        marginTop: theme.spacing.md,
+        marginLeft: theme.spacing.xl,
         borderRadius: 8,
         ":hover": {
           borderRadius: 8,
@@ -92,7 +95,8 @@ const Home: FC = () => {
         
       >Vårt Team</Button>
       </Link>
-      </Box>
+      </Flex>
+      </Flex>
     </>
   );
 };
