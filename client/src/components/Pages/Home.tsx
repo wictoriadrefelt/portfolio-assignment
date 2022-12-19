@@ -10,7 +10,7 @@ const Home: FC = () => {
     align="flex-start">
     <Image 
       src="./src/assets/people_1920.jpg"
-      height="107vh"
+      height="100vh"
       width="100vw"
       fit="cover"
       sx={(theme)=>
@@ -50,6 +50,9 @@ const Home: FC = () => {
         paddingLeft:20,
         letterSpacing:-1,
         wordSpacing:-2,
+        [theme.fn.smallerThan(930)]:{
+          paddingLeft:12,
+          }
         })}>
       Vi lyfter er organisation till  <br /> nästa nivå
       </Title>
@@ -68,6 +71,7 @@ const Home: FC = () => {
         paddingTop: 10,
         paddingBottom:10,
         paddingRight:"30px",
+        paddingLeft:12,
         }
         })}
         order={2}
@@ -91,8 +95,8 @@ const Home: FC = () => {
         },
         height:52,
         width: 192,
+    
         })}
-        
       >Vårt Team</Button>
       </Link>
       </Flex>
