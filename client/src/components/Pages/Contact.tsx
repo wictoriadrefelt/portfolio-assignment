@@ -5,8 +5,10 @@ import { TextInput, Button, Textarea, Box, Flex } from '@mantine/core';
 import { Image } from '@mantine/core';
 import { IconMail, IconPhone } from "@tabler/icons";
 import { Link } from "react-router-dom";
+import { useDocumentTitle } from "../pageTitle";
 
 const Contact: FC = () => {
+  useDocumentTitle("kontakt")
   const form = useForm({
     initialValues: { name: '', email: '', subject: '', textArea: '' },
 

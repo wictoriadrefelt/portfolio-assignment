@@ -11,6 +11,7 @@ import {
 import { IconAdjustments } from "@tabler/icons";
 import { FC, useEffect, useRef, useState } from "react";
 import MemberCard from "../MemberCard";
+import { useDocumentTitle } from "../pageTitle";
 
 export type Skill = {
   skill: string;
@@ -44,6 +45,7 @@ const skills = [
 ];
 
 const Members: FC = () => {
+  useDocumentTitle("Portfolio Galleria")
   const valueRef = useRef<string | null>();
   const [members, setMembers] = useState<Member[] | undefined>([]);
   const [filteredMembers, setFilteredMembers] = useState<Member[] | undefined>(
