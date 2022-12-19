@@ -22,6 +22,7 @@ import ProfilePicture from "../ProfilePicture";
 import Skill from "../Skill";
 import { Member } from "./Members";
 import { useDisclosure } from "@mantine/hooks";
+import { useWindowScroll } from "@mantine/hooks";
 
 const Profile: FC = () => {
   const { slug } = useParams();
@@ -29,10 +30,12 @@ const Profile: FC = () => {
   const [opened, { close, open }] = useDisclosure(false);
   const imagePath = "/src/assets/" + member?.image;
   const navigate = useNavigate();
+  const [scroll, scrollTo] = useWindowScroll();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        scrollTo({ y: 0 });
         let response = await fetch("http://localhost:4000/api/members/" + slug);
         let result = await response.json();
         if (result) {
