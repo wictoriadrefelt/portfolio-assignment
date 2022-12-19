@@ -5,6 +5,7 @@ import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
 import { Box } from "@mantine/core";
 import Profile from "../Pages/Profile";
+import Login from "../Pages/Login";
 
 const Content: FC = () => {
   return (
@@ -21,6 +22,7 @@ const Content: FC = () => {
           <Route path="/members" element={<Members />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/members/:slug" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Box>
     </Box>
