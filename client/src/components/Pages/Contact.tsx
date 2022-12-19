@@ -39,7 +39,14 @@ const Contact: FC = () => {
         },
       })}>
         
-        <Box>
+        <Box sx={(theme)=>({minWidth: 300,[theme.fn.smallerThan("sm")]: {
+          width: "80%",
+        minWidth: "unset"
+
+},[theme.fn.smallerThan("xs")]: {
+  width: "90%",
+
+},})}>
           <form onSubmit={form.onSubmit(console.log('banan'))}>
             <Title order={2} mt='xl' mb='md' sx={(theme) => ({
               [theme.fn.smallerThan("sm")]: {
@@ -51,23 +58,23 @@ const Contact: FC = () => {
             })}>Kontakta Oss</Title>
 
             <TextInput ref={searchInput} label="Namn" placeholder="Namn" {...form.getInputProps('name')}
-              sx={{ maxWidth: 500 }} />
-            <TextInput mt="md" label="Email" placeholder="Email" {...form.getInputProps('email')}
+              sx={{ maxWidth: 500}} />
+            <TextInput mt="xl" label="Email" placeholder="Email" {...form.getInputProps('email')}
               sx={{ maxWidth: 500, }} />
             <TextInput mt="md" label="Ämne" placeholder="Ämne" {...form.getInputProps('subject')}
               sx={{ maxWidth: 500, }} />
 
-            <Textarea placeholder="Ditt meddelande" label="Ditt meddelande" mt='md' size='sm' withAsterisk
-              sx={{ maxWidth: 500, }} />
+            <Textarea minRows={6} placeholder="Ditt meddelande" label="Ditt meddelande" mt='md' size='md' withAsterisk
+              sx={{ maxWidth: 500, hight: '900px' }} />
             <Button type="submit"   onClick={(e) => {
               // func here
                 e.preventDefault();
-              }} mt="md" sx={(theme) => ({ backgroundColor: theme.colors.brand[3] })}>
-              Kontakta Oss
+              }} mt="md" sx={(theme) => ({ backgroundColor: theme.colors.brand[4] })}>
+              Skicka meddelande
             </Button>
           </form>
         </Box>
-        <Box mt='25px' ml='lg' >
+        <Box mt='25px' ml='md' >
           <Title order={2} mt='xs' sx={(theme) => ({
             [theme.fn.smallerThan('md')]: {
               marginLeft: '1px'
@@ -111,14 +118,15 @@ const Contact: FC = () => {
                 e.preventDefault();
               }}
             >
-              <Flex mt='xs' direction='column' >
-                  <Text style={{ color: 'black' }}>
-                  <IconMail style={{ color: 'black', marginRight: '4px', marginTop: '15px',}} /> 
-                    support@brainwave.se </Text>
-                  <Text >
-                    <IconPhone style={{marginTop: '15px', marginRight: '4px' }} />
-                      +4673-712 34 56
-                      </Text>
+              <Flex mt='lg' direction='column' >
+              <Text style={{ marginLeft: '30px', marginTop: '5px'}} > +4673-712 34 56</Text>
+                    <IconPhone style={{marginTop: '-28px', marginRight: '4px' }} />
+
+                  <Text style={{ marginLeft: '30px', marginTop: '15px'}}>support@brainwave.se </Text>
+                  <IconMail style={{ color: 'black', marginTop: '-23px'}} /> 
+                    
+                  
+                     
               </Flex>
             </Link>
           </Box>
