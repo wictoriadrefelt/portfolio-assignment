@@ -14,18 +14,13 @@ import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   dropdown: {
-    paddingTop: '100px',
     display: 'flex',
     padding: '20px',
     marginLeft: '0',
     marginRight: '0',
-    postion: 'relative',
-    height: '150px',
     background: 'white',
     justifyContent: 'center',
-    marginTop: '40px',
-    width: '400px',
-    border: '1 px solid black',
+    marginTop: '15px',
   },
   menuLinks: {
     textDecoration: 'none',
@@ -74,14 +69,14 @@ export default function AppShellDemo() {
         <MediaQuery smallerThan="xs" styles={{ display: 'none' }}>
           <Flex direction='row' p='sm'>
           <Link hidden={opened} style={link}
-            to="/login">Login </Link>
+            to="/login">Logga in</Link>
           <Link style={link} hidden={opened} to='/contact'>Kontakt</Link>     
           </Flex>      
         </MediaQuery> 
           <Flex direction='column' justify='center' align='center'>
         <MediaQuery largerThan='xs' styles={{ display: 'none'}}>
             <Flex> 
-              <Menu shadow='md' width='80%'>
+              <Menu shadow='md' width='20%'>
                   <Menu.Target>
                 <Burger
                     opened={opened}
@@ -97,7 +92,7 @@ export default function AppShellDemo() {
                 <Menu.Item component="a" className={classes.menuLinks}>Hem</Menu.Item>
                   </Link>
                   <Link to='/login'> 
-                <Menu.Item component="a" className={classes.menuLinks}>Login</Menu.Item>
+                <Menu.Item component="a" className={classes.menuLinks}>Logga in</Menu.Item>
                   </Link>
                   <Link to='/contact'> 
                 <Menu.Item component='a' className={classes.menuLinks}>Kontakt</Menu.Item>
