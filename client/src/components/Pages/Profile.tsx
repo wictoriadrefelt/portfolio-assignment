@@ -35,11 +35,11 @@ const Profile: FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        scrollTo({ y: 0 });
         let response = await fetch("http://localhost:4000/api/members/" + slug);
         let result = await response.json();
         if (result) {
           setMember(result);
+          scrollTo({ y: 0 });
           return;
         }
       } catch (err) {
