@@ -58,15 +58,7 @@ const Contact: FC = () => {
           })}
         >
           <form onSubmit={form.onSubmit(console.log("banan"))}>
-            <Title
-              order={2}
-              mt="xl"
-              mb="md"
-              sx={(theme) => ({
-                [theme.fn.smallerThan("sm")]: {},
-                [theme.fn.smallerThan("xs")]: {},
-              })}
-            >
+            <Title order={2} mt="xl" mb="md">
               Kontakta Oss
             </Title>
 
