@@ -93,12 +93,21 @@ const Profile: FC = () => {
               mt="xs"
               sx={(theme) => ({
                 [theme.fn.smallerThan("sm")]: {
-                  flexDirection: "column",
                   alignItems: "center",
                 },
               })}
             >
-              <IconPhone /> <Text ml="xs">{member?.phone}</Text>
+              <IconPhone />{" "}
+              <Text
+                ml="xs"
+                sx={(theme) => ({
+                  [theme.fn.smallerThan("sm")]: {
+                    marginLeft: 5,
+                  },
+                })}
+              >
+                {member?.phone}
+              </Text>
             </Flex>
             <Link
               to="#"
@@ -111,12 +120,22 @@ const Profile: FC = () => {
                 mt={5}
                 sx={(theme) => ({
                   [theme.fn.smallerThan("sm")]: {
-                    flexDirection: "column",
                     alignItems: "center",
                   },
                 })}
               >
-                <IconMail /> <Text ml="xs"> {member?.mail}</Text>
+                <IconMail />{" "}
+                <Text
+                  ml="xs"
+                  sx={(theme) => ({
+                    [theme.fn.smallerThan("sm")]: {
+                      marginLeft: 5,
+                    },
+                  })}
+                >
+                  {" "}
+                  {member?.mail}
+                </Text>
               </Flex>
             </Link>
             <MediaQuery
