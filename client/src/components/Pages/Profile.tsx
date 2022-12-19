@@ -8,17 +8,25 @@ import {
   Text,
   Title,
   Grid,
+  Popover,
 } from "@mantine/core";
-import { IconArrowLeft, IconMail, IconPhone } from "@tabler/icons";
+import {
+  IconArrowLeft,
+  IconInfoCircle,
+  IconMail,
+  IconPhone,
+} from "@tabler/icons";
 import { FC, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ProfilePicture from "../ProfilePicture";
 import Skill from "../Skill";
 import { Member } from "./Members";
+import { useDisclosure } from "@mantine/hooks";
 
 const Profile: FC = () => {
   const { slug } = useParams();
   const [member, setMember] = useState<Member>();
+  const [opened, { close, open }] = useDisclosure(false);
   const imagePath = "/src/assets/" + member?.image;
   const navigate = useNavigate();
 
@@ -85,12 +93,21 @@ const Profile: FC = () => {
               mt="xs"
               sx={(theme) => ({
                 [theme.fn.smallerThan("sm")]: {
-                  flexDirection: "column",
                   alignItems: "center",
                 },
               })}
             >
-              <IconPhone /> <Text ml="xs">{member?.phone}</Text>
+              <IconPhone />{" "}
+              <Text
+                ml="xs"
+                sx={(theme) => ({
+                  [theme.fn.smallerThan("sm")]: {
+                    marginLeft: 5,
+                  },
+                })}
+              >
+                {member?.phone}
+              </Text>
             </Flex>
             <Link
               to="#"
@@ -103,12 +120,22 @@ const Profile: FC = () => {
                 mt={5}
                 sx={(theme) => ({
                   [theme.fn.smallerThan("sm")]: {
-                    flexDirection: "column",
                     alignItems: "center",
                   },
                 })}
               >
-                <IconMail /> <Text ml="xs"> {member?.mail}</Text>
+                <IconMail />{" "}
+                <Text
+                  ml="xs"
+                  sx={(theme) => ({
+                    [theme.fn.smallerThan("sm")]: {
+                      marginLeft: 5,
+                    },
+                  })}
+                >
+                  {" "}
+                  {member?.mail}
+                </Text>
               </Flex>
             </Link>
             <MediaQuery
@@ -130,7 +157,35 @@ const Profile: FC = () => {
                 },
               })}
             >
-              <Title order={2}>Skills</Title>
+              <Flex align="center">
+                <Title mr="xs" order={2}>
+                  Skills
+                </Title>{" "}
+                <Popover
+                  width={200}
+                  position="bottom"
+                  withArrow
+                  shadow="md"
+                  opened={opened}
+                >
+                  <Popover.Target>
+                    <Flex
+                      sx={{ alignItems: "center" }}
+                      onMouseEnter={open}
+                      onMouseLeave={close}
+                    >
+                      <IconInfoCircle size={20} />
+                    </Flex>
+                  </Popover.Target>
+                  <Popover.Dropdown sx={{ pointerEvents: "none" }}>
+                    <Text size="sm">
+                      Ratings är baserade på kundnöjdhet inom vardera område
+                      samt även vad ansvarig chef anser är representativt.
+                    </Text>
+                  </Popover.Dropdown>
+                </Popover>
+              </Flex>
+
               <Flex
                 w={300}
                 align={"center"}
