@@ -7,7 +7,9 @@ interface Props {
 const ProfilePicture: FC<Props> = (props) => {
   const { classes } = useStyles();
 
-  return <img className={classes.image} src={props.imagePath} />;
+  return (
+    <img alt="Bild på medlem" className={classes.image} src={props.imagePath} />
+  );
 };
 
 const useStyles = createStyles((theme, _params, getRef) => ({

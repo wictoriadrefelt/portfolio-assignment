@@ -45,7 +45,7 @@ const skills = [
 ];
 
 const Members: FC = () => {
-  useDocumentTitle("Vårt Team")
+  useDocumentTitle("Vårt Team");
   const valueRef = useRef<string | null>();
   const [members, setMembers] = useState<Member[] | undefined>([]);
   const [filteredMembers, setFilteredMembers] = useState<Member[] | undefined>(
@@ -54,6 +54,10 @@ const Members: FC = () => {
   const [value, setValue] = useState<string | null>(null);
 
   valueRef.current = value;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
