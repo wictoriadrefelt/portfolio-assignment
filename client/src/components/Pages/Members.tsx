@@ -45,7 +45,7 @@ const skills = [
 ];
 
 const Members: FC = () => {
-  useDocumentTitle("Portfolio Galleria")
+  useDocumentTitle("Vårt Team")
   const valueRef = useRef<string | null>();
   const [members, setMembers] = useState<Member[] | undefined>([]);
   const [filteredMembers, setFilteredMembers] = useState<Member[] | undefined>(

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useDocumentTitle } from "../pageTitle";
 
 const Contact: FC = () => {
-  useDocumentTitle("kontakt")
+  useDocumentTitle("Kontakt")
   const form = useForm({
     initialValues: { name: '', email: '', subject: '', textArea: '' },
 
