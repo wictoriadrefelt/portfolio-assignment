@@ -1,5 +1,5 @@
-import { Text, Title } from "@mantine/core";
-import { FC, useEffect, useRef } from "react";
+import { Modal, Text, Title } from "@mantine/core";
+import { FC, useEffect, useState } from "react";
 import { useForm } from "@mantine/form";
 import { TextInput, Button, Textarea, Box, Flex } from "@mantine/core";
 import { Image } from "@mantine/core";
@@ -8,10 +8,17 @@ import { Link } from "react-router-dom";
 import { useDocumentTitle } from "../pageTitle";
 
 const Contact: FC = () => {
-  useDocumentTitle("Kontakt")
+  useDocumentTitle("Kontakt");
+  const [opened, setOpened] = useState(false);
+  const [submit, setSubmit] = useState(false);
+  const [modalContent, setModalContent] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const form = useForm({
     initialValues: { name: "", email: "", subject: "", textArea: "" },
-
     // functions will be used to validate values at corresponding key
     validate: {
       name: (value) =>
@@ -23,12 +30,29 @@ const Contact: FC = () => {
         value.length < 2 ? "Textarea must have at least 2 letters" : null,
     },
   });
-
-  const searchInput = useRef(null);
-  useEffect(() => {
-    // current property is refered to input element
-    searchInput.current.focus();
-  }, []);
+  const handleClick = () => {
+    if (
+      form.values.name.length < 1 ||
+      form.values.email.length < 1 ||
+      form.values.textArea.length < 1
+    ) {
+      setSubmit(false);
+      setOpened(true);
+      setModalContent(false);
+      return;
+    }
+    if (!/^\S+@\S+$/.test(form.values.email)) {
+      setSubmit(false);
+      setOpened(true);
+      setModalContent(false);
+      return;
+    } else {
+      setSubmit(true);
+      setOpened(true);
+      setModalContent(true);
+      form.reset();
+    }
+  };
 
   return (
     <>
@@ -43,13 +67,16 @@ const Contact: FC = () => {
           [theme.fn.smallerThan("md")]: {
             marginTop: "0px",
             flexWrap: "wrap",
-            direction: "column",
           },
         })}
       >
         <Box
           sx={(theme) => ({
             minWidth: 300,
+            [theme.fn.smallerThan(856)]: {
+              width: "70%",
+              minWidth: "unset",
+            },
             [theme.fn.smallerThan("sm")]: {
               width: "80%",
               minWidth: "unset",
@@ -59,31 +86,36 @@ const Contact: FC = () => {
             },
           })}
         >
-          <form onSubmit={form.onSubmit(console.log("banan"))}>
+          <form
+            onSubmit={(e) => {
+              form.onSubmit((values) => console.log(values));
+              e.preventDefault();
+            }}
+          >
             <Title order={2} mt="xl" mb="md">
               Kontakta Oss
             </Title>
 
             <TextInput
-              ref={searchInput}
               label="Namn"
               placeholder="Namn"
+              autoFocus={true}
+              withAsterisk
               {...form.getInputProps("name")}
-              sx={{ maxWidth: 500 }}
             />
             <TextInput
               mt="xl"
               label="Email"
               placeholder="Email"
+              withAsterisk
               {...form.getInputProps("email")}
-              sx={{ maxWidth: 500 }}
             />
             <TextInput
               mt="md"
               label="Ämne"
               placeholder="Ämne"
+              withAsterisk
               {...form.getInputProps("subject")}
-              sx={{ maxWidth: 500 }}
             />
 
             <Textarea
@@ -93,22 +125,49 @@ const Contact: FC = () => {
               mt="md"
               size="md"
               withAsterisk
-              sx={{ maxWidth: 500, hight: "900px" }}
+              {...form.getInputProps("textArea")}
+              sx={{ hight: "900px" }}
             />
+
+            <Modal
+              opened={opened}
+              onClose={() => setOpened(false)}
+              title="Information"
+            >
+              <Text>
+                {modalContent
+                  ? "Tack för ditt meddelande"
+                  : "Var vänlig fyll i fälten korrekt"}
+              </Text>
+            </Modal>
+
             <Button
               type="submit"
-              onClick={(e) => {
-                // func here
-                e.preventDefault();
-              }}
+              onClick={handleClick}
               mt="md"
               sx={(theme) => ({ backgroundColor: theme.colors.brand[4] })}
             >
-              Skicka meddelande
+              Skicka Meddelande
             </Button>
           </form>
         </Box>
-        <Box mt="25px" ml="md">
+        <Box
+          mt="25px"
+          sx={(theme) => ({
+            minWidth: 300,
+            [theme.fn.smallerThan(856)]: {
+              width: "70%",
+              minWidth: "unset",
+            },
+            [theme.fn.smallerThan("sm")]: {
+              width: "80%",
+              minWidth: "unset",
+            },
+            [theme.fn.smallerThan("xs")]: {
+              width: "90%",
+            },
+          })}
+        >
           <Title
             order={2}
             mt="xs"
