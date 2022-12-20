@@ -8,7 +8,6 @@ const useStyles = createStyles((theme) => ({
   footer: {
     backgroundColor: "#EAE6E3",
     marginTop: 80,
-
   },
  
 
@@ -54,7 +53,9 @@ export default function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Text sx= {{paddingBottom:"20px"}} align="center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </Text>
+        <Text sx= {{paddingBottom:"20px", paddingTop:"20px"}} align="center"> 
+        Brainwave hjälper företag med allt inom utveckling. Söker du tillgängliga, taggade och proffsiga IT-konsulter? 
+        </Text>
         <Flex sx={{width:"288px" ,justifyContent:"space-around", paddingLeft: "3px"}}> 
           <Link to ="/login">
             <Button color="brand.3">Logga in</Button> 
