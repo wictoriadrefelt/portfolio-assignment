@@ -54,7 +54,7 @@ export default function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Text sx= {{paddingBottom:"20px"}} align="center"> 
+        <Text sx= {{paddingBottom:"20px", paddingTop:"20px"}} align="center"> 
         Brainwave hjälper företag med allt inom utveckling. Söker du tillgängliga, taggade och proffsiga IT-konsulter? 
         </Text>
         <Flex sx={{width:"288px" ,justifyContent:"space-around", paddingLeft: "3px"}}> 
