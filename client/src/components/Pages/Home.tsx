@@ -1,8 +1,10 @@
 import { Text, Title, Image, Box, Button, Flex, BackgroundImage} from "@mantine/core";
 import { FC } from "react";
 import { Link } from "react-router-dom";
-
+import { useDocumentTitle  } from "../pageTitle";
 const Home: FC = () => {
+  useDocumentTitle("Hem")
+
   return (
     <>
     <Flex 

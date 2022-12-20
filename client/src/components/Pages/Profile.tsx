@@ -22,8 +22,10 @@ import ProfilePicture from "../ProfilePicture";
 import Skill from "../Skill";
 import { Member } from "./Members";
 import { useDisclosure } from "@mantine/hooks";
+import { useDocumentTitle } from "../pageTitle";
 
 const Profile: FC = () => {
+  useDocumentTitle("Profil")
   const { slug } = useParams();
   const [member, setMember] = useState<Member>();
   const [opened, { close, open }] = useDisclosure(false);
