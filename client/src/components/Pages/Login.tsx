@@ -1,7 +1,10 @@
 import { Title, Text, Center, Flex } from "@mantine/core";
 import { FC } from "react";
+import { useDocumentTitle } from "../pageTitle";
 
 const Login: FC = () => {
+useDocumentTitle("Login")
+
   return (
     <>
       <Flex
