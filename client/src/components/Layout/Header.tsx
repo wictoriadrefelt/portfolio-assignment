@@ -89,17 +89,17 @@ export default function AppShellDemo() {
                 />
               </Menu.Target>
               <Menu.Dropdown className={classes.dropdown}>
-                <Link to="/">
+                <Link onClick={() => setOpened((o) => !o)} to="/">
                   <Menu.Item component="a" className={classes.menuLinks}>
                     Hem
                   </Menu.Item>
                 </Link>
-                <Link to="/login">
+                <Link onClick={() => setOpened((o) => !o)} to="/login">
                   <Menu.Item component="a" className={classes.menuLinks}>
                     Logga in
                   </Menu.Item>
                 </Link>
-                <Link to="/contact">
+                <Link onClick={() => setOpened((o) => !o)} to="/contact">
                   <Menu.Item component="a" className={classes.menuLinks}>
                     Kontakt
                   </Menu.Item>
