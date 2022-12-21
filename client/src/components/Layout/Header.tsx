@@ -55,15 +55,9 @@ export default function AppShellDemo() {
     >
       <Box
         sx={(theme) => ({
-          width: "80%",
-          [theme.fn.smallerThan(924)]: {
-            width: "70%",
-          },
-          [theme.fn.smallerThan(630)]: {
-            width: "66%",
-          },
-          [theme.fn.smallerThan("xs")]: {
-            width: "90%",
+          width: "90%",
+          [theme.fn.smallerThan(1622)]: {
+            width: "85%",
           },
         })}
       >
@@ -72,7 +66,7 @@ export default function AppShellDemo() {
         </a>
       </Box>
       <MediaQuery smallerThan="xs" styles={{ display: "none" }}>
-        <Flex direction="row" p="sm">
+        <Flex direction="row" justify="flex-end" p="sm" w={180}>
           <Link hidden={opened} style={link} to="/login">
             Logga in
           </Link>
@@ -84,7 +78,7 @@ export default function AppShellDemo() {
       <Flex direction="column" justify="center" align="center">
         <MediaQuery largerThan="xs" styles={{ display: "none" }}>
           <Flex>
-            <Menu shadow="md" width="20%">
+            <Menu shadow="md" width="10%">
               <Menu.Target>
                 <Burger
                   opened={opened}
