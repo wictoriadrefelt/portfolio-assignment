@@ -84,7 +84,7 @@ export default function AppShellDemo() {
       <Flex direction="column" justify="center" align="center">
         <MediaQuery largerThan="xs" styles={{ display: "none" }}>
           <Flex>
-            <Menu shadow="md" width="20%">
+            <Menu shadow="md" width="100px">
               <Menu.Target>
                 <Burger
                   opened={opened}
